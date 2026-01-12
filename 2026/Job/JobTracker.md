@@ -1,0 +1,51 @@
+# My job tracker for 2026: 
+- **Company**: RevTech
+- Role: Senior Backend engineer
+- Location: London based, 3 days a week onsite
+- Salary up to £85k (depending on experience)
+- Tech Stack: Java, Spring Boot, AWS, Kotlin 
+- Applied date: 10/Jan/26
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
+- **Company**: 
+- Role: 
+- Location:
+- Tech Stack: 
+- Applied date:
+- Point of contact:
+---
