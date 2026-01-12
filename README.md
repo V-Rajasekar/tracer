@@ -9,7 +9,10 @@
   - Course Link: [AWS Technical Essentials](https://skillbuilder.aws/learn/K8C2FNZM6X/aws-technical-essentials/N7Q3SXQCDY)
   - Portal: [AWS SkillBuilder](https://skillbuilder.aws/learn)
 - Competitive Programming
-  - Resources: [GeeksforGeeks](https://geeksforgeeks.org/), [LeetCode](https://leetcode.com/), DSA YouTube channels
+  - Resources: 
+  - [GeeksforGeeks](https://geeksforgeeks.org/)
+  - [LeetCode](https://leetcode.com/)
+  -  [AlgoMaster](https://algomaster.io/) Great Resources Video and problems solving in DSA Patterns, System Design Fundamentals
 
 ### Job Skills & Learning Path
 
