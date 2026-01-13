@@ -7,6 +7,7 @@
    
  ## Free Resources: 
  - [DSA Learn Sheet](https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z)
+ - [DSA Problem Solving tutorial step-by-step Cheetsheet ](https://docs.google.com/spreadsheets/d/1Sm_chm2-uWFN8xQ1PWug-8a3EKCk0QzVlr7_QmWh4cQ/edit?gid=0#gid=0)
 
 ## Revision the learnings
  -  Create short notes on the patterns
