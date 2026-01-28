@@ -1,0 +1,20 @@
+printStar 
+* * 
+* * 
+printColumnStar 
+**
+***
+****
+printStar 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+printColumnStar 
+**
+***
+****
+*****
+******
+*******

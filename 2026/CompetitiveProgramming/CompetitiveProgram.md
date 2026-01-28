@@ -30,6 +30,7 @@
 ### Intermediate
 - [ ] Sorting (including Merge Sort, Quickselect, Counting Sort, Bucket Sort, Radix Sort, Shell)
 - [ ] Binary Search
+  [Search Algorithm Guide](https://www.geeksforgeeks.org/dsa/introduction-to-searching-algorithms-2/) </br>
 - [ ] Two Pointers
 - [ ] Sliding Window
 - [ ] Prefix Sum
