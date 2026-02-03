@@ -1,5 +1,28 @@
 # Github CoPilot Certification
 
+- [Github CoPilot Certification](#github-copilot-certification)
+    - [Keys Short cuts for GitHub Copilot](#keys-short-cuts-for-github-copilot)
+    - [Inline chat suggestions](#inline-chat-suggestions)
+  - [Copilot modes](#copilot-modes)
+    - [Edit Mode vs Agent Mode (at a glance)](#edit-mode-vs-agent-mode-at-a-glance)
+  - [Prompting](#prompting)
+    - [Prompting examples for GitHub Copilot](#prompting-examples-for-github-copilot)
+      - [Role based prompts](#role-based-prompts)
+  - [Performance monitoring suggestions](#performance-monitoring-suggestions)
+    - [Prompt types supported by GitHub Copilot Chat](#prompt-types-supported-by-github-copilot-chat)
+    - [Resources](#resources)
+  - [Copilot space](#copilot-space)
+    - [How to create Copilot Space](#how-to-create-copilot-space)
+  - [Advanced Github Copilot Features](#advanced-github-copilot-features)
+  - [Githon Copilot Chat](#githon-copilot-chat)
+    - [Model selection in GitHub Copilot Chat](#model-selection-in-github-copilot-chat)
+    - [Github Copilot agent tasks on Github.com](#github-copilot-agent-tasks-on-githubcom)
+    - [Github Copilot CLI](#github-copilot-cli)
+  - [Developing unit tests with GitHub Copilot](#developing-unit-tests-with-github-copilot)
+  - [Develop application with GitHub Copilot Agents](#develop-application-with-github-copilot-agents)
+  - [Skills exercise:](#skills-exercise)
+
+
 what are the 6 core princoples of github copilot?
 The 6 core principles of GitHub Copilot are:
 1. Feasibility: GitHub Copilot is designed to assist developers by providing code suggestions and completions that are relevant and useful.
@@ -218,3 +241,40 @@ In Copilot CLI, configuration is handled via:
 - Use one-shot mode (copilot -i) for quick answers.
 
 [copilot-cli more details]([https://](https://github.com/github/copilot-cli))
+
+
+## Developing unit tests with GitHub Copilot
+
+**Setup:**
+  1. open chat view
+  2. Enter /setupTests command in chat field
+  3. Follow the instructions to set up testing framework
+**Writing unit tests:**
+  - Generate unit tests using: Chat View, Inline chat,
+  - Smart actions(selecting the code to generate the unit tests), Code line completion.
+  - `Editor` -  Right click on the class or functions in the editor and select **Copilot**, and select
+  - `Inline chat` - Ctrl+I (Windows) or Cmd+I (Mac) to open inline chat and enter `/tests` command followed by Generate unit test for this method/class.
+  -  **Generate Tests**
+  - Fix failing tests using: Fix Test Failure button (sparkle icon) or `/fixTestFailure` command in chat.
+  - Use: 
+  -   `Ask` - To analyse a workspace and then create unit tests.
+  -   `@workspace` useful to write unit tests for multiple methods in a file. 
+  -   (e.g) `@workspace /explain I need to create unit tests for the code in this file. The tests should be written in Python and use the unittest framework`
+  -   `edit` use @worspace or #codebase to add the context of the entire codebase to generate unit tests for complex scenarios.
+  - `Agent`   nothing required, it can understand the context of the entire codebase and generate unit tests accordingly. You can select tools: `Test Explorer, Terminal and Github Copilot chat` to generate unit tests.
+ 
+
+## Develop application with GitHub Copilot Agents
+
+[prompt-engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+
+[My-First-custom-instructions](https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions/your-first-custom-instructions)
+https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions/your-first-custom-instructions)
+
+[copilot-tutorial](https://docs.github.com/copilot/tutorials)
+[Github skills](https://learn.github.com/skills)
+
+## Skills exercise:
+1. [Introduction to GitHub](https://github.com/skills/introduction-to-github)
+2. [Getting Started with GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot)
+3. [Expand Your Team with Copilot](https://github.com/skills/expand-your-team-with-copilot/)
