@@ -11,6 +11,7 @@ Date: 11-Jan-2026
     Password: Raj@awspartner26
     1. Select AWS Partner Signin
     2. Courses: [AWS Technical Essentials](https://skillbuilder.aws/learn/K8C2FNZM6X/aws-technical-essentials/N7Q3SXQCDY)
+    3. [AWS Events](https://app.events.ringcentral.com/) login with tcs email address
    
 ---
    
