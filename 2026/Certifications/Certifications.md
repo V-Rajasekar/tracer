@@ -12,8 +12,8 @@ Date: 11-Jan-2026
     1. Select AWS Partner Signin
     2. Courses: [AWS Technical Essentials](https://skillbuilder.aws/learn/K8C2FNZM6X/aws-technical-essentials/N7Q3SXQCDY)
     3. [AWS Events](https://app.events.ringcentral.com/) login with tcs email address
-    4. [
-AWS Certified Developer - Associate Step-by-Step Demo](https://bitbucket.org/awsdevguru/awsdevassoc/src/master/)
+    4. [AWS Certified Developer - Associate Step-by-Step Demo](https://bitbucket.org/awsdevguru/awsdevassoc/src/master/)
+    5. [Deploy Java Service in AWS EC2](https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/)
    
 ---
    
