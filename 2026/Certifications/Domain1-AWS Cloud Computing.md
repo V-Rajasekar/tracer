@@ -228,3 +228,27 @@ Skills in:
   - Using, managing, and maintaining data stores
   - Managing data lifecycles
   - Using data caching services
+
+How to create the subnet ? 
+
+subnet calculation: 
+
+lets say the IP address 192.168.13.1  
+Sub net mask: 255.255.255.240 the last positions 255-240 = 15, but the 
+hosts per sbunet is 14, since 1 is reserved for broadcast address
+Hosts per subnet: 14 
+
+255.255.255.192 means 255 - 192 = 
+
+Data Transfer b/w 2 computers: 
+
+`Application > Data > (network interface card)NIC > Packet > Tx in cable RJ45 Cable > packet > NIC> Data > Application`
+
+A switch routes the traffic between the systems within networks 
+IP Address, Subnet mask, Gateway - The IP Address of the Router inour case its the internet modem, 
+
+![How IP Address are defined](image.png)
+
+
+
+
