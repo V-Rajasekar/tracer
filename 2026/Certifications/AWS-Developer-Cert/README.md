@@ -17,15 +17,19 @@ Date: 11-Jan-2026
    5. [Deploy Java Service in AWS EC2](https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/)
    6. [O'Reilly Learning notes](.AWSDeveloperAssociateExam.md)   
    7. [AWS Digital Learning Cloud computing](Domain1-AWS%20Cloud%20Computing.md) 
+
+### Paths: 
+
+ [O'Reilly AWS Certification Guide](https://learning.oreilly.com/certifications/guides/AWS-Certified-Developer-Associate/0636920381662/)    - Complete tutorials and Cert Mock tests
    
  ### 2. AWS Account Setup and Securing
 
    1. [AWS Secure Account and create user and assign permissions](https://docs.aws.amazon.com/hands-on/latest/setup-environment/module-two.html)
    2. [AWS CLI Setup](https://docs.aws.amazon.com/hands-on/latest/setup-environment/module-three.html)
-
-   I AM user | Login   | permission |
-   ---    | ---     |---
-   Raj-dev   |https://951013217905.signin.aws.amazon.com/console | EC2 Admin
+   
+   I AM user | Login   | permission
+   --- | ---     |---
+   Raj-dev |https://951013217905.signin.aws.amazon.com/console | EC2 Admin
  
 
 ### 3. Resources:
