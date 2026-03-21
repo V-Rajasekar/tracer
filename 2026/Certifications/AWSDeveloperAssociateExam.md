@@ -117,12 +117,48 @@ EC2 Instance: Platform Amazon Linux
   - Role: EC2ReadOnlyRole
   - Permissions: Read-only access to EC2 resources, allowing WebServer1 to retrieve information about EC2 instances without the ability to modify them. 
 IAM Role: EC2ReadOnlyRole
+
+EC2 instance connection: 
+
+Demo: SSH client
+
+
 EC2 instance login using SSH:
  `ssh -i /path/to/key.pem ec2-user@<EC2_Instance_Public_IP>`
-
+>Note: ec2-user is the default user to login to EC2 instance
 
 `aws ec2 describe-instances --region us-east-1`
 This command allows WebServer1 to retrieve information about EC2 instances in the specified region, demonstrating the read-only access granted by the EC2ReadOnlyRole.
+
+Demo: AWS management console connect
+
+Demo: AWS managmenet console Session manager
+
+EC2 > Connect > Session manager
+Prerequest: I AM > Role > Create Role > AWS service > usecase EC2 > Add permission  AmazonSSMManagedInstanceCore > Role name > SSMInstanceProfile
+
+EC2 Dashboard> Instance > Actions > Security > Modify IAM role > select SSMInstanceProfile > update IAM profile
+verify >  whoami
+More: [AWS Systems manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)
+
+Usecase: Your organization is large and has many location-based IT departments. You do not want to share Secure Shell (SSH) key pairs with the various locations. 
+
+Which connection option/s could you use?
+
+Note: Both AWS Systems Manager and EC2 Instance Connect provides a secure way to connect to your Linux instances without requiring key pairs. You use AWS Identity and Access Management (IAM) policies and principals to control SSH access to your instances. EC2 Instance Connect removes the need to share and manage SSH key pairs.
+
+2. Your security department has rejected your requests to allow administrative traffic from your network to the AWS Cloud on port 22. 
+
+Which option will allow you to administer your Amazon EC2 instances?
+With AWS Session Manager, you can manage your Amazon EC2 instances through a browser-based shell or through the AWS Command Line Interface (AWS CLI). You can use Session Manager to directly start a session with an instance while you're working in the EC2 Dashboard or AWS account. After the session is started, you can run bash commands as you would through any other connection type. Session Manager removes the need to open inbound ports, manage SSH keys, or use bastion hosts.
+other options: Amazon EC2 instance connect, SSH, Putty need SSH port opening, so wrong ans
+
+EC2 Image Builder: 
+
+EC2 Image Builder simplifies the building, testing, and deployment of virtual machine and container images for use on AWS or on premises. [AWS Image BUlder more](https://aws.amazon.com/image-builder/)
+
+
+## Storage Options
 
 <hr>
 **Federated Identity:(IDP)**
