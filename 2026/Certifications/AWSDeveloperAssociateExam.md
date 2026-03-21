@@ -173,4 +173,49 @@ Single Sign-On (SSO) with SAML:
 5. Developer authenticated identities
 
 
+Implementing Encryption
+
+When requesting a certificate for a specific domain through ACM, the service verifies domain ownership using DNS validation. It asks the user to create a specific text (TXT) record in their domain's DNS settings. Once the record is detected, ACM understands that the requester has administrative control over the domain, thus proving ownership.
+
+  AWS Certificate Manager (ACM) > Public Cert > Give Domain names (test.awsdev.guru) > RSA 248 > waits for  CNAMErecord in Route 53> pending validation > 
+
+  Route 53 > Domain hosted here  (test.awsdev.guru)>  create the CNAME >
+
+  AWS key Managment service (KMS):
+  Purpose: Manage encryption keys for data protection and compliance
+  Feature: key creation, rotation,managment, and access control
+  Integrations: AWS services, such as Amazon S3, Amazon EBS and RDS
+  Compliance: Supports FIPS 140-2 validated hardware secutiry modules(HSMs) and meets various compliance requirements.
+  Customer Master Key(CMK): A logical representation of a cryptographic key used for encryption and decryption
+  Key Material: The actual cryptographic material used for encryption and decryption, stored securely in KMS.
+  Envelope Encryption A process of encrypting plaintext data with a data key, and then ecnryptiong the data key itself with a CMK.
+  Key Policies: Json documents that define permissions and controls for a CMK
+The AWS services such as S3, EBS, RDS, and Lambda can integrate with KMS for encrypting data at-rest.
+  Create and Managing CMKs
+
+  AWS Key Management Service (KMS) is designed to create and manage cryptographic keys and control their use across a wide range of AWS services and in applications. Its primary purpose is not data migration. The service provides functionalities such as key creation, rotation, management, and access control. The other statements correctly describe the functionalities and features of KMS.
+  KMS supports both asymmetric and symmetric key cryptography.
+
+
+  Create CMKS: genwerate CMKs using the AWS Management Console, SDKs, or CLI.
+  CMK Types: AWS managed CMKs, customer managed CMKs, and custom key stores.
+  Key Rotation: Enable automatic key rotation to enhance security.
+  Alias and Tags: assign aliases and tags to CMKs for easier identification and management.
+
+  Access Control and Permission
+
+  I AM Policies Attache polies to IAM users, groups, or roles to grant permissions for CMKs.
+  Key Policies Define permissions and controls for a specific CMK.
+  Grants: Delegate specific permissions to over AWS accounts or AWS services.
+  KMS Integrations: Amazon S3 server-side encrypt, AWS EBS encrypt volumes and snapshots, AWS RDS encrypt database instance and snapshots using KMS, AWS lambda Encrypt env variables and function  artifacts.
   
+  KMS Best practises: Use separate keys application or environment. Enable key rotation
+  Follow the principles of least privilege, monitor and audit
+
+How does ACM verify the ownership of a domain for which a certificate is requested?
+
+By requesting a text record via DNS.
+
+Which of the following is NOT a type of at-rest encryption key?
+
+There are three types of at-rest encryption keys: AWS-owned keys, AWS-managed keys, and customer-managed keys. Server-side encryption is not a type of at-rest encryption key; instead, server-side encryption is a method used for data storage.
