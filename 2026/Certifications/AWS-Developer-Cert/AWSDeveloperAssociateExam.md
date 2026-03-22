@@ -78,6 +78,8 @@ Specifies:
 - Effect: Permit/Deny
 - Action: List of actions that are allowed or denied
 Resource: List of resources that the actions apply to (can use wildcards)
+
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -91,11 +93,17 @@ Resource: List of resources that the actions apply to (can use wildcards)
                 "cloudwatch:Describe*"
             ],
             "**Resource**": "*"
+            //Allowing a specific action on a specific resource
+            /*"Resource": [
+				    "arn:aws:ec2:eu-west-2:951013217905:instance/i-0c2dfffbc470fd6dd"
+			    ]*/
         }
     ]
 }
+```
 
 **Best Practices for IAM Policies:**
+
 - Regularly review and update policies to ensure they align with current security requirements and organizational needs.
 - Enable AWS CloudTrail for auditing and monitoring.
 - Use IAM roles for EC2 instances and AWS services.
@@ -147,7 +155,7 @@ Which connection option/s could you use?
 
 Note: Both AWS Systems Manager and EC2 Instance Connect provides a secure way to connect to your Linux instances without requiring key pairs. You use AWS Identity and Access Management (IAM) policies and principals to control SSH access to your instances. EC2 Instance Connect removes the need to share and manage SSH key pairs.
 
-2. Your security department has rejected your requests to allow administrative traffic from your network to the AWS Cloud on port 22. 
+1. Your security department has rejected your requests to allow administrative traffic from your network to the AWS Cloud on port 22. 
 
 Which option will allow you to administer your Amazon EC2 instances?
 With AWS Session Manager, you can manage your Amazon EC2 instances through a browser-based shell or through the AWS Command Line Interface (AWS CLI). You can use Session Manager to directly start a session with an instance while you're working in the EC2 Dashboard or AWS account. After the session is started, you can run bash commands as you would through any other connection type. Session Manager removes the need to open inbound ports, manage SSH keys, or use bastion hosts.
@@ -160,7 +168,6 @@ EC2 Image Builder simplifies the building, testing, and deployment of virtual ma
 
 ## Storage Options
 
-<hr>
 **Federated Identity:(IDP)**
 - Integrate external identities database
 - Can assign permission to users in that external database
@@ -217,7 +224,8 @@ When requesting a certificate for a specific domain through ACM, the service ver
 
   Route 53 > Domain hosted here  (test.awsdev.guru)>  create the CNAME >
 
-  AWS key Managment service (KMS):
+  ### AWS key Managment service (KMS):
+
   Purpose: Manage encryption keys for data protection and compliance
   Feature: key creation, rotation,managment, and access control
   Integrations: AWS services, such as Amazon S3, Amazon EBS and RDS
