@@ -21,6 +21,11 @@ I Am- Groups:
 
 Roles associate to EC2 instances is the best practice for granting permissions to applications running on EC2 instances. By attaching an IAM role to an EC2 instance, you can securely provide the necessary permissions for the applications on that instance to access AWS resources without needing to manage long-term credentials.
 
+How to associaete a role to an EC2 instance? 
+
+`EC2 Instance > I AM Role > Permissions > Policy > AWS managed policy (AmazonEC2ReadOnlyAccess) > Attach policy`  
+
+
 
 ## Policies:
 A set of **permissions**
@@ -117,19 +122,19 @@ User: Alice
 Group: Admins
   Permissions: (Policies) Full access to all AWS services and resources
 
-
+1. Create a Role with the following permissions/policy:
 Role: EC2ReadOnlyRole  
  Policy: AmazonEC2ReadOnlyAccess
 
+2. Assign the role to an EC2 instance (WebServer1) with the following configuration:
 EC2 Instance: Platform Amazon Linux
   - Role: EC2ReadOnlyRole
   - Permissions: Read-only access to EC2 resources, allowing WebServer1 to retrieve information about EC2 instances without the ability to modify them. 
-IAM Role: EC2ReadOnlyRole
+Now EC2 IAM Role is assigned to EC2ReadOnlyRole
 
-EC2 instance connection: 
+3. Verify the role permits to read AWS EC2 resources but not modify them.: 
 
 Demo: SSH client
-
 
 EC2 instance login using SSH:
  `ssh -i /path/to/key.pem ec2-user@<EC2_Instance_Public_IP>`
@@ -181,18 +186,18 @@ Compatible IdPs:
  - Reduce administrative overhead
  - Enhanced security by leveraging existing identity management systems
 
-IAM - Web Identity Federation:
+**IAM - Web Identity Federation:**
 - Allows users to sign in to AWS using credentials from a web identity provider (e.g., Google, Facebook, Amazon)
 - Users can access AWS resources without needing to create an IAM user for each individual
 - Amazon AWS Cognito is a service that provides web identity federation and user management for web and mobile applications. It allows users to sign in using their existing social media accounts or other identity providers, and it provides temporary AWS credentials for accessing AWS resources securely.
 - Use case: A mobile app that allows users to sign in with their Google accounts and access AWS resources (e.g., S3 buckets, DynamoDB tables) without needing to create separate IAM users for each app user.
 
-Federated Identities - OIDC:
+**Federated Identities - OIDC:**
 - OpenID Connect (OIDC) is an authentication protocol built on top of the OAuth 2.0 framework. 
 - Configure an OIDC identity provider in IAM to allow users from an OIDC-compliant identity provider (e.g., Google, Auth0) to access AWS resources securely.
 - Role-based access control can be implemented by creating IAM roles with specific permissions and allowing users from the OIDC provider to assume those roles.  
 
-Single Sign-On (SSO) with SAML:
+**Single Sign-On (SSO) with SAML:**
 - SAML Providers: Configure a SAML identity provider in IAM to enable Single Sign-On (SSO) for users from a SAML-compliant identity provider (e.g., Microsoft Active Directory Federation Services, Okta) to access AWS resources securely.
 - SSO Process: Users authenticate with the SAML identity provider, which then issues a SAML assertion. The user can then use this assertion to assume an IAM role that grants access to AWS resources, allowing for seamless access without needing separate AWS credentials.
 
@@ -216,24 +221,25 @@ Single Sign-On (SSO) with SAML:
 5. Developer authenticated identities
 
 
-Implementing Encryption
+## Implementing Encryption
 
 When requesting a certificate for a specific domain through ACM, the service verifies domain ownership using DNS validation. It asks the user to create a specific text (TXT) record in their domain's DNS settings. Once the record is detected, ACM understands that the requester has administrative control over the domain, thus proving ownership.
 
-  AWS Certificate Manager (ACM) > Public Cert > Give Domain names (test.awsdev.guru) > RSA 248 > waits for  CNAMErecord in Route 53> pending validation > 
+  `AWS Certificate Manager (ACM) > Public Cert > Give Domain names (test.awsdev.guru) > RSA 248 > waits for  CNAMErecord in Route 53> pending validation >` 
 
-  Route 53 > Domain hosted here  (test.awsdev.guru)>  create the CNAME >
+  `Route 53 > Domain hosted here  (test.awsdev.guru)>  create the CNAME >`
 
   ### AWS key Managment service (KMS):
 
-  Purpose: Manage encryption keys for data protection and compliance
-  Feature: key creation, rotation,managment, and access control
-  Integrations: AWS services, such as Amazon S3, Amazon EBS and RDS
-  Compliance: Supports FIPS 140-2 validated hardware secutiry modules(HSMs) and meets various compliance requirements.
-  Customer Master Key(CMK): A logical representation of a cryptographic key used for encryption and decryption
-  Key Material: The actual cryptographic material used for encryption and decryption, stored securely in KMS.
-  Envelope Encryption A process of encrypting plaintext data with a data key, and then ecnryptiong the data key itself with a CMK.
-  Key Policies: Json documents that define permissions and controls for a CMK
+- `Purpose:` Manage encryption keys for data protection and compliance
+- `Feature:` key creation, rotation,managment, and access control
+- `Integrations:` AWS services, such as Amazon S3, Amazon EBS and RDS
+- `Compliance:` Supports FIPS 140-2 validated hardware secutiry modules(HSMs) and meets various compliance requirements.
+- `Customer Master Key(CMK):` A logical representation of a cryptographic key used for encryption and decryption
+- `Key Material:` The actual cryptographic material used for encryption and decryption, stored securely in KMS.
+Envelope Encryption A process of encrypting plaintext data with a data key, and then ecnryptiong the data key itself with a CMK.
+-`Key Policies:` Json documents that define permissions and controls for a CMK
+
 The AWS services such as S3, EBS, RDS, and Lambda can integrate with KMS for encrypting data at-rest.
   Create and Managing CMKs
 
@@ -246,7 +252,7 @@ The AWS services such as S3, EBS, RDS, and Lambda can integrate with KMS for enc
   Key Rotation: Enable automatic key rotation to enhance security.
   Alias and Tags: assign aliases and tags to CMKs for easier identification and management.
 
-  Access Control and Permission
+ **Access Control and Permission**
 
   I AM Policies Attache polies to IAM users, groups, or roles to grant permissions for CMKs.
   Key Policies Define permissions and controls for a specific CMK.
