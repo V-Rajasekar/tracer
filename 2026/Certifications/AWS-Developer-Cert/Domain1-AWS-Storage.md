@@ -169,7 +169,93 @@ ElastiCache is a popular choice for:
 
 ## Amazon Redshift
 
-Amazon Redshift is an enterprise-level, petabyte scale, fully managed data warehousing service. With Amazon Redshift, you can achieve efficient storage and optimum query performance through a combination of massively parallel processing, columnar data storage, and very efficient, targeted data compression encoding schemes.
+Amazon Redshift is an enterprise-level, petabyte scale, fully managed data warehousing service. With Amazon Redshift, you can achieve efficient storage and optimum query 
+
+
+
+performance through a combination of massively parallel processing, columnar data storage, and very efficient, targeted data compression encoding schemes.
+
+
+
+Architecture overview
+
+AWS database services: Amazon Relational Database Service (Amazon RDS) 
+and Amazon Elastic Compute Cloud (Amazon EC2) to host your database engine. 
+
+Amazon RDS Multi-AZ deployments provide enhanced avail and durability for DB instance.
+When provisioned a multiple  AZ DB instances, AWS RDS automatically creates a master DB instance and sync replicates the data to a standy instance in a diff availability zone.
+
+Scaling in a server-based arch
+
+vertically scale up your Amazon RDS master database
+ - instance by selecting a bigger instance size. 
+ - More than 18 instances size to choose (e.g)  Amazon RDS MySQL, PostgreSQL, MariaDB, Oracle, or Microsoft SQL Server instance
+ - six familair DB engines are  Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle, and SQL Server.
+Amazon RDS supports both On-Demand and Reserved Instance pricing
+
+Spot and Provisioned are instance pricing methods that are available with other AWS services but not with Aurora
+
+
+Option 2: AWS Instance to host the DB instances
+Business case: Migrating our existing application to AWS was seamless by using Amazon EC2 database instances that were identically configured to our on-premises database servers.
+Benefits: AWS EC2 gives full control over DB deployment. Encrypt AWS EBS colume to protect data both at rest and in transit
+Your responsible for the administration and maintenance of your database server.
+Which of the following pricing methods are available to pay for Aurora? 
+On-Demand, reserved,serverless
+Difference between 
+
+Amazon EC2 vs Amazon RDS
+
+Automated entire process DB conf, managment, and maintenance | Full controler over DB deployment and maintanence
+Config read replica to improve performance | manual seetup
+Automatic backups and encrypt at rest and in transit | ncrypt AWS EBS Volume to protect data both at rest and in transit
+scale DB compute and storage with only few clicks/API call with no downtime
+
+Amazon RDS Connections to the database are secured using HTTPS, which implements SSL. VPCs provide the greatest possible network access control. Security groups are used to control access to your database
+
+
+Serverless Architecture: 
+
+AWS serverless database solutions: Amazon DynamoDB and Amazon Aurora Serverless.
+Serverless architecture Example:
+1. Client a UI application to render static webpage by using a simple static web server.
+2. Web Server Amazon S3(Web assets storage) serves all of the static HTML, CSS and JS files for the app
+3. Lambda function: For login and accessing data can be build as Lambda function, and read write from your DB.
+4.Amazon Cognito as an identiy service which can be integrated with AWS Lambda with Amazon cognito, you can easily ad user sign up and sign-in and social identity providers 
+5. Amazon dynamo DB scales tables up/down for capacity and maitain performance.
+
+Amazon Dynamo DB benefits: 
+DynamoDB supports ACID (Atomicity, Consistency, Isolation, and Durability) 
+Auto scaling perfect for unpredictable, infrequent usage and variable workloads
+fast access to local data by easily replicating tables across multiple AWS Regions
+Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available caching service built for Amazon DynamoDB. DAX delivers up to a 10 times performance improvement—from milliseconds to microseconds—even at millions of requests per second.
+
+DynamoDB does not require you to configure indexing on tables, but it is recommended. DynamoDB allows you to add one or more secondary indexes to aid in query performance. You can add up to 20 global secondary indexes and up to 5 local secondary indexes per table
+Relational databases are comprised of tables, records, and fields. DynamoDB is a non-relational database comprised of tables, items, and attributes
+
+Which of the following are valid capacity modes for DynamoDB? (
+On-Demand, Provisioned
+
+Amazon Aurora Serverless
+Usecase: Relation databases that are only used during a specific period of time.
+, Amazon Aurora Serverless is an on-demand, automatically scaling configuration for Amazon Aurora (MySQL and PostgreSQL).
+
+Aurora automatically starts up, shuts down, and scales capacity up or down based on your application's needs.
+
+Pay only for the database resources you consume, on a per-second basis. Your database automatically shuts down when not in use, so you don't pay for the database instance unless it's actually running
+
+Aurora supports general purpose and memory-optimized instance classes. It also supports the burstable performance instance feature
+
+
+Build a Modern Application with Purpose-Built AWS Databases
+https://aws.amazon.com/blogs/database/building-a-modern-application-with-purpose-built-aws-databases/
+
+
+https://github.com/amazon-archives/aws-full-stack-template?tab=readme-ov-file#getting-started
+
+https://github.com/aws-samples/aws-bookstore-demo-app/blob/main/README.md
+
+
 
 
 
