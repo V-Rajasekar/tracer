@@ -16,7 +16,46 @@ Date: 11-Jan-2026
    4. [AWS Certified Developer - Associate Step-by-Step Demo](https://bitbucket.org/awsdevguru/awsdevassoc/src/master/)
    5. [Deploy Java Service in AWS EC2](https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/)
    6. [O'Reilly Learning notes](.AWSDeveloperAssociateExam.md)   
-   7. [AWS Digital Learning Cloud computing](Domain1-AWS%20Cloud%20Computing.md) 
+   7. [AWS Digital Learning Cloud computing](Domain1-AWS%20Cloud%20Computing.md)
+
+### 2. Tracker
+
+AWS Skill Builder Learning Plan Courses
+
+**Week-1:**
+
+- [X] AWS Technical Essentials
+- [X] AWS Compute Services Overview
+- [X] Build with Amazon EC2
+
+**Week-2:**
+- [X] AWS Database Offerings
+- [] Amazon ElastiCache Getting Started
+- [X] Getting into the Serverless Mindset
+- [] Amazon DynamoDB for Serverless Architectures
+
+**Week-3:**
+
+- [X] Amazon API Gateway for Serverless Applications
+- [] Designing Event-Driven Architectures
+- [] Architecting Serverless Applications
+- [] Scaling Serverless Architectures
+- [] Getting Started with DevOps on AWS
+
+**Week-4:**
+- [] Getting Started with AWS CloudFormation
+- [] Deploying Serverless Applications
+- [] Deep Dive with Security: AWS Identity and AccessManagement (IAM)
+
+**Week-5:**
+- [] AWS Lambda - Troubleshooting
+- [] AWS CloudFront- Troubleshooting
+- [] AWS CloudFormation Stacks- Troubleshooting
+- [] Amazon DynamoDB - Troubleshooting
+- [] Security and Observability for Serverless Applications
+- [] Securing and Protecting your Data in Amazon Simple Storage
+- [] Service (S3)
+- [] Exam Prep Official Practice Question Set: AWS Certified Developer - Associate (DVA-C02 - English)
 
 ### Paths: 
 
