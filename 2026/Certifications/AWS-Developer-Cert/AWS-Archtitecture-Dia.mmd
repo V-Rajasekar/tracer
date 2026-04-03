@@ -1,0 +1,9 @@
+---
+id: 69bb2597-8c34-49d6-b21c-4fd992e5817c
+---
+sequenceDiagram
+    participant Client
+    participant API_Gateway as API Gateway
+    participant Lambda_Authorizer as Lambda Authorizer
+    Client->>API_Gateway: request
+    API_Gateway->>Lambda_Authorizer: checkAuthorization
