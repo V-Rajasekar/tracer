@@ -146,3 +146,13 @@ Skills in:
   - Using, managing, and maintaining data stores
   - Managing data lifecycles
   - Using data caching services
+
+## Labs: 
+
+skillbuilder.aws/search?searchText=ECS+EKS&page=1&learningStyles=guided_labs
+
+Resources:
+
+Choosing an AWS container service -> docs.aws.amazon.com/decision-guides/latest/containers-on-aws-how-to-choose/choosing-aws-container-service.html
+
+Amazon ECS vs Amazon EKS: making sense of AWS container services -> aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/
